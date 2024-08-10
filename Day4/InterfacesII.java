@@ -1,3 +1,5 @@
+package javaDevelopment.Day4;
+
 interface A{
 
     // all the varibles inside interfaces are by default static and final

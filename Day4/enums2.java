@@ -1,3 +1,5 @@
+package javaDevelopment.Day4;
+
 enum Laptop{
     Macbook(90000), XPS(130000), Surface(150000), Thinkpad(30000);
 

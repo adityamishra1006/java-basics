@@ -1,3 +1,5 @@
+package javaDevelopment.Day4;
+
 // Object class is called by default
 
 class Laptop{

@@ -1,6 +1,6 @@
 package javaDevelopment.Day4;
 
-import javaDevelopment.B;
+import javaDevelopment.Day4.*;
 
 public class Demo {
     public static void main(String[] args) {
