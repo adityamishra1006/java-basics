@@ -1,7 +1,6 @@
 # JAVA Developemtn
 ## Day 1
-##
-Java Programming Basics
+## Java Programming Basics
 
 ## Introduction to Java
 
