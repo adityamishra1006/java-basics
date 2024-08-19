@@ -180,6 +180,3 @@ public class Conditionals4 {
 - **Explanation**: 
   - This example is identical to Example 3 and further demonstrates the use of the ternary operator for concise conditional logic.
 
----
-
-This comprehensive guide provides a solid foundation in Java programming, explaining key concepts with practical code examples. The detailed line-by-line explanations make it easier to understand and apply these concepts in real-world programming scenarios.
