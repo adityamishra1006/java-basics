@@ -1,4 +1,4 @@
-##Day 1
+## Day 1
 # Java Programming Basics
 
 ## Introduction to Java
