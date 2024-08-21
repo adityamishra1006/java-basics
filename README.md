@@ -1,4 +1,4 @@
-# JAVA Developemtn
+# JAVA Developement
 ## Day 1
 ## Java Programming Basics
 
