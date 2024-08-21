@@ -180,3 +180,291 @@ public class Conditionals4 {
 - **Explanation**: 
   - This example is identical to Example 3 and further demonstrates the use of the ternary operator for concise conditional logic.
 
+---
+## Day 2
+
+---
+
+## Switch Case in Java
+
+The switch case statement is a control structure that allows you to choose one of many code blocks to be executed based on the value of an expression.
+
+### Example: Switch Case Statement
+
+```java
+public class SwitchCase {
+    public static void main(String[] args) {
+        int n = 2;
+        
+        switch (n) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break;
+        }
+    }
+}
+```
+
+- **Explanation**:
+  - The `switch` statement evaluates the variable `n` and executes the corresponding case block.
+  - **Important**: The `break` statement is used to terminate the switch block, preventing fall-through to subsequent cases.
+  - If none of the cases match, the `default` case is executed.
+
+## Loops in Java
+
+Loops allow you to execute a block of code repeatedly, either a specific number of times or until a condition is met.
+
+### For Loop
+
+The `for` loop is used when the number of iterations is known beforehand.
+
+```java
+public class ForLoop {
+    public static void main(String[] args) {
+        // Loop from 0 to 10
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+
+        // Loop from 10 to 0
+        for(int i = 10; i >= 0; i--){
+            System.out.println(i);
+        }
+    }
+}
+```
+
+- **Explanation**:
+  - The loop runs from `i = 0` to `i <= 10` in the first loop, printing numbers from 0 to 10.
+  - In the second loop, it runs from `i = 10` to `i >= 0`, printing numbers in reverse order.
+
+### While Loop
+
+The `while` loop continues to execute as long as the condition is true.
+
+```java
+public class Loops {
+    public static void main(String[] args) {
+        int i = 1;
+        while(i <= 10){
+            System.out.println("Hi " + i);
+            int j = 1;
+            while(j <= 5){
+                System.out.println("Hello " + j);
+                j++;
+            }
+            i++;
+        }
+        System.out.println("Bye " + i);
+    }
+}
+```
+
+- **Explanation**:
+  - The outer `while` loop prints "Hi" followed by the value of `i` for values from 1 to 10.
+  - The inner `while` loop prints "Hello" followed by the value of `j` for values from 1 to 5, for each iteration of the outer loop.
+
+### Do-While Loop
+
+The `do-while` loop is similar to the `while` loop, but it guarantees that the code block will be executed at least once.
+
+```java
+public class DoWhile {
+    public static void main(String[] args) {
+        int i = 11;
+        do {
+            System.out.println("Hi " + i);
+            i++;
+        } while(i <= 10);
+        // We get the output once even if the condition is false.
+    }
+}
+```
+
+- **Explanation**:
+  - The `do-while` loop executes the block of code first and then checks the condition.
+  - **Important**: Even though the condition `i <= 10` is false initially, the code inside the loop runs once.
+
+### Enhanced For Loop
+
+The enhanced `for` loop, also known as the "for-each" loop, is used to iterate through arrays or collections.
+
+```java
+int[] numbers = {1, 2, 3, 4, 5};
+
+for (int number : numbers) {
+    System.out.println(number);
+}
+```
+
+- **Explanation**:
+  - The enhanced for loop simplifies the iteration over arrays by eliminating the need for an index variable.
+
+## Arrays in Java
+
+Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.
+
+### Example: One-Dimensional Array
+
+```java
+public class Array {
+    public static void main(String[] args) {
+        // If we know the values
+        int nums[] = {5, 6, 7, 2};
+        System.out.println(nums[0]); // 5
+        System.out.println(nums[1]); // 6
+
+        nums[1] = 3;
+        System.out.println(nums[1]); // 3
+
+        // If we don't know the values beforehand
+        int num[] = new int[4];
+        num[0] = 4;
+        num[1] = 6;
+        num[2] = 7;
+        num[3] = 9;
+
+        for(int i = 0; i < num.length; i++){
+            System.out.print(num[i] + " ");
+        }
+    }
+}
+```
+
+- **Explanation**:
+  - The first array `nums` is initialized with values.
+  - The second array `num` is declared with a fixed size, and values are assigned later.
+
+### Multidimensional Arrays
+
+Multidimensional arrays are arrays of arrays, allowing you to create matrices or tables.
+
+```java
+public class MultiDimensionalArray {
+    public static void main(String[] args) {
+        int[][] nums = new int[3][4];
+
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 4; j++){
+                nums[i][j] = (int)(Math.random() * 1000);
+            }
+        }
+
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 4; j++){
+                System.out.print(nums[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        for(int n[] : nums){
+            for(int m : n){
+                System.out.print(m + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+
+- **Explanation**:
+  - A two-dimensional array `nums` is created with 3 rows and 4 columns.
+  - The array is filled with random values and printed in both a nested loop and an enhanced for loop.
+
+### Jagged Arrays
+
+Jagged arrays are arrays of arrays with different lengths.
+
+```java
+int[][] jaggedArray = new int[3][];
+
+jaggedArray[0] = new int[2];
+jaggedArray[1] = new int[4];
+jaggedArray[2] = new int[3];
+```
+
+- **Explanation**:
+  - In a jagged array, each sub-array can have a different length, providing more flexibility in managing data.
+
+## Static Keyword in Java
+
+The `static` keyword in Java is used for memory management, making it possible to access variables and methods without creating an instance of the class.
+
+### Example: Static Variable and Static Method
+
+```java
+class Mobile {
+    String brand;
+    int price;
+    static String name;
+
+    static {
+        name = "Phone";
+        System.out.println("In Static Block");
+    }
+
+    public Mobile(){
+        brand = "";
+        price = 15000;
+        System.out.println("In Constructor");
+    }
+
+    public void show() {
+        System.out.println(brand + ":" + price + ":" + name);
+    }
+
+    public static void show1(Mobile obj){
+        System.out.println("in static method -- ");
+        System.out.println(obj.brand + ":" + obj.price + ":" + name);
+    }
+}
+
+public class StaticKeyword {
+    public static void main(String[] args) throws ClassNotFoundException {
+        Mobile obj1 = new Mobile();
+        obj1.brand = "Apple";
+        obj1.price = 70000;
+        Mobile.name = "Smart Phone";
+        
+        Mobile obj2 = new Mobile();
+        obj2.brand = "Samsung";
+        obj2.price = 30000;
+        Mobile.name = "Smart Phone";
+
+        obj1.show();
+        obj2.show();
+    }
+}
+```
+
+- **Explanation**:
+  - **Static Variable**: Shared by all objects of the class. Changes made to it by one object are reflected in all others.
+  - **Static Method**: Can be called without creating an object. It can only access static data members and cannot access non-static data members directly.
+  - **Static Block**: Executed when the class is loaded, before the main method or constructors.
+
+- **Important**: The `main` method is static because it is the entry point of the program and must be accessible without creating an instance of the class.
+
+---
+
+
