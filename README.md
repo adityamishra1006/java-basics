@@ -181,7 +181,6 @@ public class Conditionals4 {
 
 ## Switch Case
 
-### Explanation
 The `switch` statement in Java is used to execute one out of multiple blocks of code based on the value of a variable. It provides a cleaner way of writing multiple `if-else-if` statements.
 
 ### Important Points
@@ -240,14 +239,13 @@ public class SwitchCase {
     }
 }
 ```
-- **Explanation:**
+
   - The variable `n` is checked against each `case`. 
   - If `n` matches a case, the corresponding block executes. 
   - The `default` case handles any values of `n` that do not match the specified cases.
 
 ## Loops
 
-### Explanation
 Loops are used to execute a block of code repeatedly until a specified condition is met.
 
 ### Important Points
@@ -345,7 +343,7 @@ public class DoWhile {
 
 ## Arrays
 
-### Explanation
+
 An array is a collection of elements of the same type stored in contiguous memory locations.
 
 ### Important Points
@@ -392,7 +390,6 @@ public class ArrayExample {
 
 ## Multidimensional Arrays
 
-### Explanation
 Multidimensional arrays are arrays of arrays. They can be used to represent data in a grid or matrix format.
 
 ### Important Points
