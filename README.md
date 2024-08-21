@@ -1,5 +1,4 @@
 # JAVA Developement
-## Day 1
 ## Java Programming Basics
 
 ## Introduction to Java
@@ -179,10 +178,6 @@ public class Conditionals4 {
 
 - **Explanation**: 
   - This example is identical to Example 3 and further demonstrates the use of the ternary operator for concise conditional logic.
-
----
-
-## Day 2
 
 ## Switch Case in Java
 
