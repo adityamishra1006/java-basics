@@ -1,5 +1,4 @@
-# JAVA Developemtn
-## Day 1
+# JAVA Developement
 ## Java Programming Basics
 
 ## Introduction to Java
@@ -180,3 +179,350 @@ public class Conditionals4 {
 - **Explanation**: 
   - This example is identical to Example 3 and further demonstrates the use of the ternary operator for concise conditional logic.
 
+## Switch Case
+
+The `switch` statement in Java is used to execute one out of multiple blocks of code based on the value of a variable. It provides a cleaner way of writing multiple `if-else-if` statements.
+
+### Important Points
+- **Important:** Always include a `default` case to handle unexpected values.
+- Use `break` statements to prevent fall-through, where the execution continues into the next case block even if it doesn't match.
+- `switch` can work with `byte`, `short`, `char`, `int`, `String`, and enum types.
+
+### Syntax and Explanation
+
+```java
+switch(variable) {
+    case value1:
+        // Code block
+        break; // Important: Stops the execution of more cases.
+    case value2:
+        // Code block
+        break;
+    default:
+        // Code block
+}
+```
+
+### Code and Explanation
+
+```java
+public class SwitchCase {
+    public static void main(String[] args) {
+        int n = 2;
+        
+        switch (n) {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid day");
+                break; // Important: Ensures the code exits the switch block.
+        }
+    }
+}
+```
+
+  - The variable `n` is checked against each `case`. 
+  - If `n` matches a case, the corresponding block executes. 
+  - The `default` case handles any values of `n` that do not match the specified cases.
+
+## Loops
+
+Loops are used to execute a block of code repeatedly until a specified condition is met.
+
+### Important Points
+- Be careful with loop conditions to avoid infinite loops.
+- Ensure that the loop counter or condition changes within the loop to eventually terminate it.
+- Nested loops can be powerful but should be used cautiously to avoid complexity.
+
+### Syntax and Explanation
+
+#### While Loop
+
+```java
+while (condition) {
+    // Code to be executed
+}
+```
+
+#### For Loop
+
+```java
+for (initialization; condition; update) {
+    // Code to be executed
+}
+```
+
+#### Do-While Loop
+
+```java
+do {
+    // Code to be executed
+} while (condition);
+```
+
+### Code and Explanation
+
+#### While Loop Example
+
+```java
+public class Loops {
+    public static void main(String[] args) {
+        int i = 1;
+        while(i <= 10) {
+            System.out.println("Hii " + i);
+            int j = 1;
+            while(j <= 5) {
+                System.out.println("Hello " + j);
+                j++;
+            }
+            i++;
+        }
+        System.out.println("Byee " + i);
+    }
+}
+```
+- **Explanation:**
+  - The outer loop prints "Hii" 10 times.
+  - The inner loop prints "Hello" 5 times for each iteration of the outer loop.
+  - The loop counters `i` and `j` are incremented to prevent infinite loops.
+
+#### For Loop Example
+
+```java
+public class ForLoop {
+    public static void main(String[] args) {
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+
+        for (int i = 10; i >= 0; i--) {
+            System.out.println(i);
+        }
+    }
+}
+```
+- **Explanation:**
+  - The first loop prints numbers from 0 to 10.
+  - The second loop prints numbers from 10 down to 0.
+
+#### Do-While Loop Example
+
+```java
+public class DoWhile {
+    public static void main(String[] args) {
+        int i = 11;
+        do {
+            System.out.println("Hii " + i);
+            i++;
+        } while (i <= 10);
+        // Important: The loop executes at least once even if the condition is false.
+    }
+}
+```
+- **Explanation:**
+  - The `do-while` loop guarantees at least one execution of the loop body, even if the condition is false initially.
+
+## Arrays
+
+
+An array is a collection of elements of the same type stored in contiguous memory locations.
+
+### Important Points
+- **Important:** Array indices start from 0.
+- Be cautious of `ArrayIndexOutOfBoundsException`.
+- Arrays have a fixed size after initialization.
+
+### Syntax and Explanation
+
+```java
+int[] arrayName = new int[size];
+```
+- `arrayName`: The name of the array.
+- `size`: The number of elements the array can hold.
+
+### Code and Explanation
+
+```java
+public class ArrayExample {
+    public static void main(String[] args) {
+        // If we know the values
+        int nums[] = {5, 6, 7, 2};
+        System.out.println(nums[0]); // 5
+        System.out.println(nums[1]); // 6
+
+        nums[1] = 3;
+        System.out.println(nums[1]); // 3
+
+        int num[] = new int[4];
+        num[0] = 4;
+        num[1] = 6;
+        num[2] = 7;
+        num[3] = 9;
+
+        for (int i = 0; i < num.length; i++) {
+            System.out.print(num[i] + " ");
+        }
+    }
+}
+```
+- **Explanation:**
+  - Two arrays are declared and initialized: one with predefined values and another with dynamic values.
+  - The array elements are accessed using their indices.
+
+## Multidimensional Arrays
+
+Multidimensional arrays are arrays of arrays. They can be used to represent data in a grid or matrix format.
+
+### Important Points
+- The number of elements in each row of a multidimensional array can be different.
+- Iterating over multidimensional arrays typically involves nested loops.
+
+### Syntax and Explanation
+
+```java
+dataType[][] arrayName = new dataType[rows][columns];
+```
+- `rows`: Number of rows in the array.
+- `columns`: Number of columns in the array.
+
+### Code and Explanation
+
+```java
+public class MultiDimensionalArray {
+    public static void main(String[] args) {
+        int[][] nums = new int[3][4];
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                nums[i][j] = (int)(Math.random() * 1000);
+            }
+        }
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 4; j++) {
+                System.out.print(nums[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        for (int[] row : nums) {
+            for (int element : row) {
+                System.out.print(element + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+```
+- **Explanation:**
+  - A 3x4 array is initialized and filled with random integers.
+  - The array is printed in a grid format using nested loops.
+  - An enhanced for loop is used to iterate through the array elements.
+
+Certainly! Below is the updated explanation for the `static` keyword section, including the reasoning behind why the `main` method is marked as static, and the important note about it.
+
+---
+
+## Static Keyword and Methods
+
+The `static` keyword in Java is used to define class-level methods and variables. These can be accessed without creating an instance of the class.
+
+### Important Points
+- **Important:** Static methods cannot access non-static variables or methods directly.
+- Static variables are shared across all instances of the class.
+- The `static` block is executed when the class is first loaded into memory.
+- **Important:** The `main` method is marked as `static` because it is the entry point of the program. Without marking it `static`, the JVM would need to create an instance of the class to invoke the `main` method, which would not be possible since no object exists when the program starts.
+
+### Syntax and Explanation
+
+```java
+class ClassName {
+    static dataType variableName;
+    
+    static {
+        // Static block
+    }
+    
+    static void methodName() {
+        // Static method
+    }
+
+    public static void main(String[] args) {
+        // Main method - Important: It's static to allow the JVM to call it without creating an object.
+    }
+}
+```
+
+### Code and Explanation
+
+```java
+class Mobile {
+    String brand;
+    int price;
+    static String name;
+
+    static {
+        name = "Phone";
+        System.out.println("In Static Block");
+    }
+
+    public Mobile() {
+        brand = "";
+        price = 15000;
+        System.out.println("In Constructor");
+    }
+    
+    public void show() {
+        System.out.println(brand + ":" + price + ":" + name);
+    }
+
+    public static void show1(Mobile obj) {
+        System.out.println("in static method -- ");
+        System.out.println(obj.brand + ":" + obj.price + ":" + name);
+    }
+}
+
+public class StaticKeyword {
+    public static void main(String[] args) {
+        Mobile obj1 = new Mobile();
+
+        obj1.brand = "Apple";
+        obj1.price = 70000;
+        Mobile.name = "Smart Phone";
+        
+        Mobile obj2 = new Mobile();
+
+        obj2.brand = "Samsung";
+        obj2.price = 30000;
+        Mobile.name = "Smart Phone";
+
+        obj1.show();
+        obj2.show();
+
+        Mobile.show1(obj1); // We can call static method directly with the class name.
+    }
+}
+```
+- **Explanation:**
+  - The `static` block initializes the static variable `name` before any instances of `Mobile` are created.
+  - The `show1` static method demonstrates how to use static and non-static variables together when an object reference is passed.
+  - The `main` method is marked as `static` to allow the JVM to invoke it without needing to create an instance of the `StaticKeyword` class. This is critical for the program to start executing as soon as it's launched.
